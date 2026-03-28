@@ -1,0 +1,31 @@
+﻿
+> frontend@0.0.0 lint
+> eslint .
+
+
+D:\4N EcoTech\frontend\src\pages\BookingPage.jsx
+  193:39  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  320:26  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Home.jsx
+  295:59  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  592:31  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Login.jsx
+  171:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Signup.jsx
+  70:20  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  68 |   });
+  69 |
+> 70 |   const password = watch("password");
+     |                    ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  71 |   const confirmPassword = watch("confirmPassword");
+  72 |   const passwordsMatch =
+  73 |     password && confirmPassword && password === confirmPassword;  react-hooks/incompatible-library
+
+Γ£û 6 problems (5 errors, 1 warning)
+

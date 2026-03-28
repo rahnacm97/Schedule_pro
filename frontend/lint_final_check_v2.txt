@@ -1,0 +1,49 @@
+﻿
+> frontend@0.0.0 lint
+> eslint .
+
+
+D:\4N EcoTech\frontend\src\context\AuthProvider.jsx
+   4:27  error  'useState' is not defined                                                                   no-undef
+   8:19  error  'setLoading' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+   8:33  error  'useState' is not defined                                                                   no-undef
+  10:3   error  'useEffect' is not defined                                                                  no-undef
+  13:28  error  'api' is not defined                                                                        no-undef
+  13:37  error  'ApiRoutes' is not defined                                                                  no-undef
+  20:28  error  'api' is not defined                                                                        no-undef
+  20:37  error  'ApiRoutes' is not defined                                                                  no-undef
+  31:28  error  'api' is not defined                                                                        no-undef
+  31:37  error  'ApiRoutes' is not defined                                                                  no-undef
+
+D:\4N EcoTech\frontend\src\context\ThemeProvider.jsx
+  4:29  error  'useState' is not defined   no-undef
+  6:3   error  'useEffect' is not defined  no-undef
+
+D:\4N EcoTech\frontend\src\pages\BookingPage.jsx
+  193:39  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  320:26  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Home.jsx
+  295:59  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  592:31  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Login.jsx
+  171:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Signup.jsx
+  70:20  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  68 |   });
+  69 |
+> 70 |   const password = watch("password");
+     |                    ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  71 |   const confirmPassword = watch("confirmPassword");
+  72 |   const passwordsMatch =
+  73 |     password && confirmPassword && password === confirmPassword;  react-hooks/incompatible-library
+  86:3   warning  Unused eslint-disable directive (no problems were reported from 'no-unused-vars')
+
+Γ£û 19 problems (17 errors, 2 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

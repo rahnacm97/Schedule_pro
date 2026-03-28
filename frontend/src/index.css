@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+}
+
+:root,
+.light {
+  --bg-main: #f5f2ec;
+  --bg-card: #ffffff;
+  --text-primary: #1a1814;
+  --text-secondary: #8a8780;
+  --border-color: #dddad4;
+  --divider-color: #f0ede8;
+  --nav-bg: #f5f2ec;
+  --nav-text: #1a1814;
+  --nav-hover-bg: #e8e5e0;
+  --accent-color: #c8b99a;
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root.dark {
+  --bg-main: #12110e;
+  --bg-card: #1c1a16;
+  --text-primary: #faf8f4;
+  --text-secondary: #a09d96;
+  --border-color: #3e3b36;
+  --divider-color: #2e2b26;
+  --nav-bg: #0a0908;
+  --nav-text: #faf8f4;
+  --nav-hover-bg: #1e1c18;
+  --accent-color: #ba7517;
+}
+
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+#root {
+  width: 100%;
+}
+

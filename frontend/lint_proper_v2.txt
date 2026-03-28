@@ -1,0 +1,82 @@
+﻿
+> frontend@0.0.0 lint
+> eslint .
+
+node.exe : Warning: React version not specified in 
+eslint-plugin-react settings. See https://github.com/jsx-eslin
+t/eslint-plugin-react#configuration .
+At C:\Program Files\nodejs\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: React 
+..    .configuration .:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+D:\4N EcoTech\frontend\src\context\AuthContext.jsx
+   1:25  error  'useContext' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+   5:14  error  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-refresh/only-export-components
+   7:32  error  'children' is missing in props validation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react/prop-types
+  16:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  14 |   useEffect(() => {
+  15 |     // Sync loading state if needed on mount
+> 16 |     setLoading(false);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  17 |   }, []);
+  18 |
+  19 |   const login = async (email, password) => {  react-hooks/set-state-in-effect
+
+D:\4N EcoTech\frontend\src\context\ThemeContext.jsx
+  1:25  error  'useContext' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                           no-unused-vars
+  3:14  error  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file  react-refresh/only-export-components
+  5:33  error  'children' is missing in props validation                                                                   react/prop-types
+
+D:\4N EcoTech\frontend\src\pages\BookingPage.jsx
+   70:18  error  'label' is missing in props validation                           react/prop-types
+   70:25  error  'error' is missing in props validation                           react/prop-types
+   70:32  error  'children' is missing in props validation                        react/prop-types
+  193:39  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  320:26  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Home.jsx
+   40:20  error  'target' is missing in props validation                          react/prop-types
+   40:28  error  'suffix' is missing in props validation                          react/prop-types
+   64:24  error  'icon' is missing in props validation                            react/prop-types
+   64:45  error  'title' is missing in props validation                           react/prop-types
+   64:52  error  'body' is missing in props validation                            react/prop-types
+   64:58  error  'delay' is missing in props validation                           react/prop-types
+   90:17  error  'num' is missing in props validation                             react/prop-types
+   90:22  error  'title' is missing in props validation                           react/prop-types
+   90:29  error  'body' is missing in props validation                            react/prop-types
+   90:35  error  'delay' is missing in props validation                           react/prop-types
+  294:59  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  591:31  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Login.jsx
+  171:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+D:\4N EcoTech\frontend\src\pages\Signup.jsx
+   70:20  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+  68 |   });
+  69 |
+> 70 |   const password = watch("password");
+     |                    ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  71 |   const confirmPassword = watch("confirmPassword");
+  72 |   const passwordsMatch =
+  73 |     password && confirmPassword && password === confirmPassword;  react-hooks/incompatible-library
+   86:3   warning  Unused eslint-disable directive (no problems were reported from 'no-unused-vars')
+  122:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react/no-unescaped-entities
+
+Γ£û 28 problems (26 errors, 2 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
